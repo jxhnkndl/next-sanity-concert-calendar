@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
 import dayjs from 'dayjs';
 
 import { getConcerts } from '@/sanity/utils';
@@ -34,9 +36,11 @@ export default async function Home() {
           </div>
         ))}
       </div>
-      <div className='flex flex-col items-center justify-center uppercase font-medium bg-black text-slate-50 hover:bg-gray-800 transition-all w-[200px] p-4 mb-10'>
+      <Link
+        href='/contact'
+        className='flex flex-col items-center justify-center uppercase font-medium bg-black text-slate-50 hover:bg-gray-800 transition-all w-[200px] p-4 mb-10'>
         Contact
-      </div>
+      </Link>
     </main>
   );
 }
