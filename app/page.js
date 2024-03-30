@@ -9,11 +9,11 @@ export default async function Home() {
   console.log(concerts);
 
   return (
-    <main className='px-10 my-20'>
-      <h1 className='text-6xl text-center font-medium uppercase mb-10'>
+    <main className='px-10 my-20 flex flex-col items-center'>
+      <h1 className='text-6xl text-center font-medium uppercase mb-20'>
         Concerts
       </h1>
-      <div className='max-w-[1240px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-8'>
+      <div className='max-w-[1240px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-8 mb-20'>
         {concerts.map((concert) => (
           <div key={concert._id} className='bg-slate-50 relative'>
             <div className='p-4 uppercase font-extrabold flex flex-col justify-center items-center bg-black text-slate-50 absolute top-0 right-0 w-[100px] z-50'>
@@ -33,6 +33,9 @@ export default async function Home() {
             </div>
           </div>
         ))}
+      </div>
+      <div className='flex flex-col items-center justify-center uppercase font-medium bg-black text-slate-50 hover:bg-gray-800 transition-all w-[200px] p-4 mb-10'>
+        Contact
       </div>
     </main>
   );
