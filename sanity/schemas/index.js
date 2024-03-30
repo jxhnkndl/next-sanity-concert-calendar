@@ -1,3 +1,7 @@
+import Concert from "./Concert"
+
 export const schema = {
-  types: [],
+  types: [
+    Concert
+  ],
 }
